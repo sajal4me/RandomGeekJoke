@@ -38,7 +38,7 @@ final class JokeTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             mainVStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             mainVStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            mainVStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 8),
+            mainVStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
             mainVStack.topAnchor.constraint(equalTo: topAnchor, constant: 8)
         ])
     }
