@@ -65,12 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				C85E2BB62A9DD05100E34875 /* Network */,
-				C85E2B9D2A9DCD9500E34875 /* AppDelegate.swift */,
-				C85E2B9F2A9DCD9500E34875 /* SceneDelegate.swift */,
-				C85E2BA92A9DCD9C00E34875 /* Assets.xcassets */,
-				C85E2BAB2A9DCD9C00E34875 /* LaunchScreen.storyboard */,
-				C85E2BAE2A9DCD9C00E34875 /* Info.plist */,
-				C85E2BA62A9DCD9500E34875 /* RandomGeekJoke.xcdatamodeld */,
+				C85E2BBF2A9DD9B500E34875 /* Main */,
 			);
 			path = RandomGeekJoke;
 			sourceTree = "<group>";
@@ -85,6 +80,19 @@
 				C85E2BBD2A9DD8D100E34875 /* Usecase.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C85E2BBF2A9DD9B500E34875 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C85E2BA62A9DCD9500E34875 /* RandomGeekJoke.xcdatamodeld */,
+				C85E2BAB2A9DCD9C00E34875 /* LaunchScreen.storyboard */,
+				C85E2BAE2A9DCD9C00E34875 /* Info.plist */,
+				C85E2BA92A9DCD9C00E34875 /* Assets.xcassets */,
+				C85E2B9D2A9DCD9500E34875 /* AppDelegate.swift */,
+				C85E2B9F2A9DCD9500E34875 /* SceneDelegate.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
