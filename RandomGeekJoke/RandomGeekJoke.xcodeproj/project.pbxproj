@@ -15,6 +15,7 @@
 		C85E2BB52A9DCFBC00E34875 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BB42A9DCFBC00E34875 /* Endpoint.swift */; };
 		C85E2BB82A9DD0D500E34875 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BB72A9DD0D500E34875 /* Target.swift */; };
 		C85E2BBA2A9DD15700E34875 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BB92A9DD15700E34875 /* Networking.swift */; };
+		C85E2BBC2A9DD1A900E34875 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BBB2A9DD1A900E34875 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C85E2BB42A9DCFBC00E34875 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C85E2BB72A9DD0D500E34875 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		C85E2BB92A9DD15700E34875 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C85E2BBB2A9DD1A900E34875 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				C85E2BB42A9DCFBC00E34875 /* Endpoint.swift */,
 				C85E2BB72A9DD0D500E34875 /* Target.swift */,
 				C85E2BB92A9DD15700E34875 /* Networking.swift */,
+				C85E2BBB2A9DD1A900E34875 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85E2BA82A9DCD9500E34875 /* RandomGeekJoke.xcdatamodeld in Sources */,
+				C85E2BBC2A9DD1A900E34875 /* NetworkError.swift in Sources */,
 				C85E2B9E2A9DCD9500E34875 /* AppDelegate.swift in Sources */,
 				C85E2BB52A9DCFBC00E34875 /* Endpoint.swift in Sources */,
 				C85E2BBA2A9DD15700E34875 /* Networking.swift in Sources */,
