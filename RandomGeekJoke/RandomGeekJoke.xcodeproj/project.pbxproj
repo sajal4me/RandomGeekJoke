@@ -25,6 +25,7 @@
 		C85E2BD32A9E0A8C00E34875 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BD22A9E0A8C00E34875 /* JokeModel.swift */; };
 		C85E2BD62A9E0C0600E34875 /* JokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BD52A9E0C0600E34875 /* JokePresenter.swift */; };
 		C85E2BD82A9E0CA700E34875 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BD72A9E0CA700E34875 /* JokeTableViewCell.swift */; };
+		C85E2BDA2A9E0D9F00E34875 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BD92A9E0D9F00E34875 /* JokeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C85E2BD22A9E0A8C00E34875 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		C85E2BD52A9E0C0600E34875 /* JokePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePresenter.swift; sourceTree = "<group>"; };
 		C85E2BD72A9E0CA700E34875 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
+		C85E2BD92A9E0D9F00E34875 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				C85E2BCE2A9E093700E34875 /* CircularProgressBarView.swift */,
 				C85E2BD52A9E0C0600E34875 /* JokePresenter.swift */,
 				C85E2BD72A9E0CA700E34875 /* JokeTableViewCell.swift */,
+				C85E2BD92A9E0D9F00E34875 /* JokeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				C85E2BB82A9DD0D500E34875 /* Target.swift in Sources */,
 				C85E2BD82A9E0CA700E34875 /* JokeTableViewCell.swift in Sources */,
 				C85E2BC22A9DE03400E34875 /* Repository.swift in Sources */,
+				C85E2BDA2A9E0D9F00E34875 /* JokeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
