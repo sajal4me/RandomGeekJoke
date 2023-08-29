@@ -1,11 +1,11 @@
 # RandomGeekJoke
 
 ## Preview  
-<img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/f867e4ee-eccf-4472-80a5-cf1baa27de3a width="350" />   
+<img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/f867e4ee-eccf-4472-80a5-cf1baa27de3a width="300" />   
 
-<img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/5644ade5-778a-4f70-a726-66bcb4d7a77e width="350" />
+<img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/5644ade5-778a-4f70-a726-66bcb4d7a77e width="300" />
 
-<img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/00f4d9d0-7325-4c5c-8189-8b7cd133bfba width="350" />
+<img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/00f4d9d0-7325-4c5c-8189-8b7cd133bfba width="300" />
 
 ## Summary
 1. **RandomGeekJoke** is an iOS mobile application developed using the Swift programming language.
@@ -25,6 +25,10 @@ This application follows the Model View Presenter Architecture
 
 ## How To run
 
-1. Clone this repository 
+1. Begin by cloning this repository to your local machine.
 
-2. open RandomGeekJoke.xcodeproj 
+2. Launch Xcode and open the "RandomGeekJoke.xcodeproj" project file.
+
+3. Within Xcode, choose a simulator from the available options.
+
+4. Press the key combination Command + R to initiate the build and run process.
