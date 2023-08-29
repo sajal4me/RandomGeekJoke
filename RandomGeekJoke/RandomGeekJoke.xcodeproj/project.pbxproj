@@ -26,6 +26,7 @@
 		C85E2BD62A9E0C0600E34875 /* JokePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BD52A9E0C0600E34875 /* JokePresenter.swift */; };
 		C85E2BD82A9E0CA700E34875 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BD72A9E0CA700E34875 /* JokeTableViewCell.swift */; };
 		C85E2BDA2A9E0D9F00E34875 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BD92A9E0D9F00E34875 /* JokeViewController.swift */; };
+		C85E2BDC2A9E178D00E34875 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BDB2A9E178D00E34875 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C85E2BD52A9E0C0600E34875 /* JokePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokePresenter.swift; sourceTree = "<group>"; };
 		C85E2BD72A9E0CA700E34875 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 		C85E2BD92A9E0D9F00E34875 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
+		C85E2BDB2A9E178D00E34875 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				C85E2BAE2A9DCD9C00E34875 /* Info.plist */,
 				C85E2B9D2A9DCD9500E34875 /* AppDelegate.swift */,
 				C85E2B9F2A9DCD9500E34875 /* SceneDelegate.swift */,
+				C85E2BDB2A9E178D00E34875 /* MainCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				C85E2BA82A9DCD9500E34875 /* RandomGeekJoke.xcdatamodeld in Sources */,
 				C85E2BBE2A9DD8D100E34875 /* Usecase.swift in Sources */,
 				C85E2BC82A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift in Sources */,
+				C85E2BDC2A9E178D00E34875 /* MainCoordinator.swift in Sources */,
 				C85E2BBC2A9DD1A900E34875 /* NetworkError.swift in Sources */,
 				C85E2B9E2A9DCD9500E34875 /* AppDelegate.swift in Sources */,
 				C85E2BB52A9DCFBC00E34875 /* Endpoint.swift in Sources */,
