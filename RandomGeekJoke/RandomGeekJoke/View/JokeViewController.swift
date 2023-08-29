@@ -28,8 +28,7 @@ final class JokeViewController: UIViewController, UITableViewDelegate {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(JokeTableViewCell.self, forCellReuseIdentifier: "JokeTableViewCell")
-        
+        tableView.register(JokeTableViewCell.self, forCellReuseIdentifier: String(describing: JokeTableViewCell.self))
         return tableView
     }()
     
@@ -53,7 +52,6 @@ final class JokeViewController: UIViewController, UITableViewDelegate {
         self.progressBar.completionHandler = { [weak self] in
             self?.presenter.fetchJokes()
         }
-        
     }
     
     override func viewDidLayoutSubviews() {
@@ -64,7 +62,7 @@ final class JokeViewController: UIViewController, UITableViewDelegate {
     
     private func setupDataSource() {
         dataSource = UITableViewDiffableDataSource(tableView: tableView, cellProvider: { tableView, indexPath, model -> UITableViewCell? in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "JokeTableViewCell", for: indexPath) as! JokeTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: JokeTableViewCell.self), for: indexPath) as! JokeTableViewCell
             
             cell.titleLabel.text = model.joke
             
@@ -78,8 +76,10 @@ final class JokeViewController: UIViewController, UITableViewDelegate {
         snapshot.appendSections([.main])
         snapshot.appendItems(jokes)
         
-        dataSource.applySnapshotUsingReloadData(snapshot)
-        self.restartProgressBar()
+        
+        dataSource.apply(snapshot, animatingDifferences: false) {
+            self.restartProgressBar()
+        }
     }
     
     private func startProgressBar() {
