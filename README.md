@@ -3,8 +3,9 @@
 ## Preview  
 <img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/f867e4ee-eccf-4472-80a5-cf1baa27de3a width="350" />   
 
-
 <img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/5644ade5-778a-4f70-a726-66bcb4d7a77e width="350" />
+
+<img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/00f4d9d0-7325-4c5c-8189-8b7cd133bfba width="350" />
 
 ## Summary
 1. **RandomGeekJoke** is an iOS mobile application developed using the Swift programming language.
