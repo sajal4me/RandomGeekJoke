@@ -21,6 +21,7 @@
 		C85E2BC42A9DE09200E34875 /* LocalJokeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BC32A9DE09200E34875 /* LocalJokeStorage.swift */; };
 		C85E2BC72A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BC52A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift */; };
 		C85E2BC82A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BC62A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift */; };
+		C85E2BCF2A9E093700E34875 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BCE2A9E093700E34875 /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C85E2BC32A9DE09200E34875 /* LocalJokeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJokeStorage.swift; sourceTree = "<group>"; };
 		C85E2BC52A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedJoke+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C85E2BC62A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedJoke+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C85E2BCE2A9E093700E34875 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		C85E2B9C2A9DCD9500E34875 /* RandomGeekJoke */ = {
 			isa = PBXGroup;
 			children = (
+				C85E2BCB2A9E08D000E34875 /* View */,
 				C85E2BC92A9DE1EA00E34875 /* Repository */,
 				C85E2BC02A9DDFF000E34875 /* Database */,
 				C85E2BB62A9DD05100E34875 /* Network */,
@@ -121,6 +124,14 @@
 				C85E2BC32A9DE09200E34875 /* LocalJokeStorage.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		C85E2BCB2A9E08D000E34875 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C85E2BCE2A9E093700E34875 /* CircularProgressBarView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 				C85E2BB52A9DCFBC00E34875 /* Endpoint.swift in Sources */,
 				C85E2BBA2A9DD15700E34875 /* Networking.swift in Sources */,
 				C85E2BA02A9DCD9500E34875 /* SceneDelegate.swift in Sources */,
+				C85E2BCF2A9E093700E34875 /* CircularProgressBarView.swift in Sources */,
 				C85E2BB82A9DD0D500E34875 /* Target.swift in Sources */,
 				C85E2BC22A9DE03400E34875 /* Repository.swift in Sources */,
 			);
