@@ -17,6 +17,10 @@
 		C85E2BBA2A9DD15700E34875 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BB92A9DD15700E34875 /* Networking.swift */; };
 		C85E2BBC2A9DD1A900E34875 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BBB2A9DD1A900E34875 /* NetworkError.swift */; };
 		C85E2BBE2A9DD8D100E34875 /* Usecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BBD2A9DD8D100E34875 /* Usecase.swift */; };
+		C85E2BC22A9DE03400E34875 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BC12A9DE03300E34875 /* Repository.swift */; };
+		C85E2BC42A9DE09200E34875 /* LocalJokeStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BC32A9DE09200E34875 /* LocalJokeStorage.swift */; };
+		C85E2BC72A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BC52A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift */; };
+		C85E2BC82A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E2BC62A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		C85E2BB92A9DD15700E34875 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		C85E2BBB2A9DD1A900E34875 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C85E2BBD2A9DD8D100E34875 /* Usecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usecase.swift; sourceTree = "<group>"; };
+		C85E2BC12A9DE03300E34875 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		C85E2BC32A9DE09200E34875 /* LocalJokeStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJokeStorage.swift; sourceTree = "<group>"; };
+		C85E2BC52A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedJoke+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C85E2BC62A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedJoke+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,8 @@
 		C85E2B9C2A9DCD9500E34875 /* RandomGeekJoke */ = {
 			isa = PBXGroup;
 			children = (
+				C85E2BC92A9DE1EA00E34875 /* Repository */,
+				C85E2BC02A9DDFF000E34875 /* Database */,
 				C85E2BB62A9DD05100E34875 /* Network */,
 				C85E2BBF2A9DD9B500E34875 /* Main */,
 			);
@@ -85,14 +95,32 @@
 		C85E2BBF2A9DD9B500E34875 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				C85E2BA62A9DCD9500E34875 /* RandomGeekJoke.xcdatamodeld */,
 				C85E2BAB2A9DCD9C00E34875 /* LaunchScreen.storyboard */,
-				C85E2BAE2A9DCD9C00E34875 /* Info.plist */,
 				C85E2BA92A9DCD9C00E34875 /* Assets.xcassets */,
+				C85E2BAE2A9DCD9C00E34875 /* Info.plist */,
 				C85E2B9D2A9DCD9500E34875 /* AppDelegate.swift */,
 				C85E2B9F2A9DCD9500E34875 /* SceneDelegate.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C85E2BC02A9DDFF000E34875 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				C85E2BC52A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift */,
+				C85E2BC62A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift */,
+				C85E2BA62A9DCD9500E34875 /* RandomGeekJoke.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		C85E2BC92A9DE1EA00E34875 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C85E2BC12A9DE03300E34875 /* Repository.swift */,
+				C85E2BC32A9DE09200E34875 /* LocalJokeStorage.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,14 +193,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C85E2BC72A9DE11100E34875 /* ManagedJoke+CoreDataClass.swift in Sources */,
+				C85E2BC42A9DE09200E34875 /* LocalJokeStorage.swift in Sources */,
 				C85E2BA82A9DCD9500E34875 /* RandomGeekJoke.xcdatamodeld in Sources */,
 				C85E2BBE2A9DD8D100E34875 /* Usecase.swift in Sources */,
+				C85E2BC82A9DE11100E34875 /* ManagedJoke+CoreDataProperties.swift in Sources */,
 				C85E2BBC2A9DD1A900E34875 /* NetworkError.swift in Sources */,
 				C85E2B9E2A9DCD9500E34875 /* AppDelegate.swift in Sources */,
 				C85E2BB52A9DCFBC00E34875 /* Endpoint.swift in Sources */,
 				C85E2BBA2A9DD15700E34875 /* Networking.swift in Sources */,
 				C85E2BA02A9DCD9500E34875 /* SceneDelegate.swift in Sources */,
 				C85E2BB82A9DD0D500E34875 /* Target.swift in Sources */,
+				C85E2BC22A9DE03400E34875 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UXM6A56QR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomGeekJoke/Info.plist;
+				INFOPLIST_FILE = RandomGeekJoke/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -339,7 +371,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UXM6A56QR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomGeekJoke/Info.plist;
+				INFOPLIST_FILE = RandomGeekJoke/Main/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
