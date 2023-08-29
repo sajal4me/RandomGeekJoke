@@ -22,6 +22,9 @@
 ## Architecture
 This application follows the Model View Presenter Architecture
 
+## HLL Diagram
+<img width="1600" alt="RandomGeekJoke_Architecture" src="https://github.com/sajal4me/RandomGeekJoke/assets/17638808/caa77e05-c9da-4737-aa1f-a123f4777b64">
+
 
 ## How To run
 
