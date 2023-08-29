@@ -6,10 +6,7 @@
 
 <img src=https://github.com/sajal4me/RandomGeekJoke/assets/17638808/5644ade5-778a-4f70-a726-66bcb4d7a77e width="350" />
 
-### Video Link
-
-
-## Introduction
+## Summary
 1. **RandomGeekJoke** is an iOS mobile application developed using the Swift programming language.
 
 2. The app utilizes Core Data, a framework that guarantees the persistence of data across sessions.
