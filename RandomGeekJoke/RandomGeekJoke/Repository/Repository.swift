@@ -65,7 +65,6 @@ final class JokeRepository: Repository {
                 })
             }
         }
-        
     }
     
     @discardableResult
