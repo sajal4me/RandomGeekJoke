@@ -36,7 +36,6 @@ internal final class Networking: NetworkProtocol {
             
             return try decoder.decode(T.self, from: data)
         } catch {
-            print(error)
             throw NetworkError.decodableFail(error.localizedDescription)
         }
     }
