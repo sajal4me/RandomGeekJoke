@@ -11,7 +11,7 @@ final class JokeViewController: UIViewController, UITableViewDelegate {
     
     private let progressBar: CircularProgressBarView
     private var timer: Timer?
-    private var totalTime: TimeInterval = 10 // Total time for the timer in seconds
+    private var totalTime: TimeInterval = 60 // Total time for the timer in seconds
     private var currentTime: TimeInterval = 0
     private let presenter: JokePresenter
     
