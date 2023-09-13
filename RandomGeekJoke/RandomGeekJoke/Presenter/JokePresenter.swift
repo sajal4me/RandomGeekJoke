@@ -28,22 +28,16 @@ final class JokePresenter {
             
             switch result {
             case .empty:
-                DispatchQueue.main.async {
-                    self.jokesModel.removeAll()
-                    self.delegate?.present(jokes: self.jokesModel)
-                }
+                self.jokesModel.removeAll()
+                self.delegate?.present(jokes: self.jokesModel)
                 
             case .found(let jokes):
-                DispatchQueue.main.async {
-                    let models = jokes.map { JokeModel.init(joke: $0) }
-                    self.jokesModel.append(contentsOf: models)
-                    
-                    self.delegate?.present(jokes: models)
-                }
+                let models = jokes.map { JokeModel.init(joke: $0) }
+                self.jokesModel.append(contentsOf: models)
+                
+                self.delegate?.present(jokes: models)
             case .failure(let error):
-                DispatchQueue.main.async {
-                    self.delegate?.present(error: error)
-                }
+                self.delegate?.present(error: error)
             }
         })
     }
