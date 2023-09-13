@@ -5,15 +5,16 @@
 //  Created by Sajal Gupta on 29/08/23.
 //
 
+import Combine
 import Foundation
 
 protocol NetworkProtocol {
-    func request<T: Decodable>(endpoint: Endpoint, decoder: JSONDecoder) async throws -> T
+    func request<Output: Decodable>(endpoint: Endpoint, decoder: JSONDecoder) -> AnyPublisher<Output, Error>
 }
 
 internal final class Networking: NetworkProtocol {
     
-    func request<T: Decodable>(endpoint: Endpoint, decoder: JSONDecoder) async throws -> T {
+    func request<Output: Decodable>(endpoint: Endpoint, decoder: JSONDecoder) -> AnyPublisher<Output, Error> {
         var component = URLComponents()
         component.scheme = endpoint.scheme
         component.host = endpoint.baseURL
@@ -21,23 +22,25 @@ internal final class Networking: NetworkProtocol {
         component.queryItems = endpoint.parameters
         
         guard let url = component.url else {
-            throw NetworkError.invalidURL
+            return Fail(error: NetworkError.invalidURL)
+                .eraseToAnyPublisher()
         }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = endpoint.method
-        let session = URLSession(configuration: .default)
-        
-        do  {
-            let (data, response) = try await session.data(from: url)
-            guard let httpResponse = response as? HTTPURLResponse, isOK(httpResponse) else {
-                throw NetworkError.invalidData
+        return URLSession
+            .shared
+            .dataTaskPublisher(for: url)
+            .mapError { error in
+                return NetworkError.custom(error.localizedDescription)
             }
-            
-            return try decoder.decode(T.self, from: data)
-        } catch {
-            throw NetworkError.decodableFail(error.localizedDescription)
-        }
+            .tryMap { [self] (data, response) -> (data: Data, response: URLResponse) in
+                guard let httpResponse = response as? HTTPURLResponse, isOK(httpResponse) else {
+                    throw NetworkError.invalidData
+                }
+                return (data, response)
+            }
+            .map(\.data)
+            .decode(type: Output.self, decoder: decoder)
+            .eraseToAnyPublisher()
     }
     
     private func isOK(_ response: HTTPURLResponse) -> Bool {

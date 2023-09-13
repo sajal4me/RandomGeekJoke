@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import Combine
 
 protocol Repository {
     func fetch(completion: @escaping LocalStore.RetrievalCompletion)
@@ -14,8 +15,7 @@ protocol Repository {
 
 final class JokeRepository: Repository {
     private static let maxStorageAllowed = 10
-    typealias JokeResult = Result<String, Error>
-    
+    private var cancellables = Set<AnyCancellable>()
     private let localStore: LocalStore
     private let remoteFetcher: UsecaseProtocol
     
@@ -25,34 +25,22 @@ final class JokeRepository: Repository {
     }
     
     func fetch(completion: @escaping LocalStore.RetrievalCompletion) {
-        Task {
-            let result = await fetch()
-                        
-            switch result {
-            case .success(let joke):
-                
+        
+        remoteFetcher.fetchJoke()
+            .receive(on: DispatchQueue.main)
+            .sink { onCompletion in
+                if case let .failure(error) = onCompletion {
+                    self.retrieve(completion: completion)
+                }
+            } receiveValue: { joke in
                 self.removeAndStore(joke: joke, completion: { [weak self] error in
                     if let error = error {
                         completion(.failure(error))
                     }
                     self?.retrieve(completion: completion)
                 })
-                
-            case .failure:
-                //  API Request fail, still looking for data in coredata to retrive previously stored jokes
-                // In real app we can gracefully handle this error by showing Toast meaasage on UI
-                self.retrieve(completion: completion)
             }
-        }
-    }
-    
-    private func fetch() async -> JokeResult  {
-        do {
-            let model: String = try await remoteFetcher.fetchJoke()
-            return .success(model)
-        } catch {
-            return .failure(error)
-        }
+            .store(in: &cancellables)
     }
     
     private func removeAndStore(joke: String, completion: @escaping (Error?) -> Void) {

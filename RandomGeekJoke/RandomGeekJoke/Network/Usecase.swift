@@ -5,12 +5,12 @@
 //  Created by Sajal Gupta on 29/08/23.
 //
 
+import Combine
 import Foundation
 
 internal protocol UsecaseProtocol {
-    func fetchJoke() async throws -> String
+    func fetchJoke() -> AnyPublisher<String, Error>
 }
-
 
 internal final class Usecase: UsecaseProtocol {
     private let networkProvider: NetworkProtocol
@@ -19,16 +19,13 @@ internal final class Usecase: UsecaseProtocol {
         self.networkProvider = networking
     }
 
-    func fetchJoke() async throws -> String {
-        
-        let jokeModel: String = try await networkProvider
+    func fetchJoke() -> AnyPublisher<String, Error> {
+        return networkProvider
             .request(
-                endpoint: Target
-                    .joke,
+                endpoint:
+                    Target.joke,
                 decoder: JSONDecoder()
             )
-        
-        return jokeModel
     }
 }
 
